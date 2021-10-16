@@ -17,7 +17,7 @@ namespace DemoAPI.Controllers
         public PeopleController()
         {
             people.Add(new Person { FirstName = "Ramon", LastName = "Felix", Id = 1 });
-            people.Add(new Person { FirstName = "Gene", LastName = "Felix", Id = 2 });
+            people.Add(new Person { FirstName = "gene", LastName = "felix", Id = 2 });
             people.Add(new Person { FirstName = "Emi", LastName = "Felix", Id = 3 });
         }
         /// <summary>
@@ -53,12 +53,15 @@ namespace DemoAPI.Controllers
         // POST: api/People
         public void Post(Person val)
         {
+            Random rnd = new Random();
+            val.Id = rnd.Next(5, 500);
             people.Add(val);
         }
 
         // DELETE: api/People/5
         public void Delete(int id)
         {
+           
         }
     }
 }

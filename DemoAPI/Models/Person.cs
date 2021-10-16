@@ -17,10 +17,10 @@ namespace DemoAPI.Models
         /// <summary>
         /// Nombre de la persona
         /// </summary>
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } = "";
         /// <summary>
         /// Ya te imaginas
         /// </summary>
-        public string LastName { get; set; }
+        public string LastName { get; set; } = "";
     }
 }
